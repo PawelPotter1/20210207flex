@@ -1,18 +1,35 @@
-body{
+body {
     display: flex;
-    flex-direction: column-reverse;
-    flex-wrap: wrap-reverse; /*domyślnie*/
-    justify-content: flex-start; /*domyślnie flex-start*/
-}
-
-body > * {
-    flex-shrink: 1; /*wartość domyślna*/
-}
-
-
-
-/*
-.box:nth-child(3){
-    flex-shrink: 0;
-}
-*/
+    flex-direction: row;
+    flex-wrap: wrap; /* domyslnie flex-wrap: nowrap */
+  
+    /* wzgledem osi głownej zgodna z flex-direction */
+    justify-content: center; /* domyslnie flex-start */
+  
+    /* wzgledem osi pomocniczej - domyslne to stretch */
+    align-content: stretch;
+  
+    /* align-items: flex-start; */
+    /* wartosc unikalna baseline */
+  }
+  
+  /*
+  body > * {
+      flex-shrink: 1; 
+      /* domyślnie flex-shrik=1" */
+  
+  /*}*/
+  
+  .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 100px;
+    flex-grow: 0;
+    transition: flex-grow 0.8s ease-in-out;
+  }
+  
+  .box:hover{
+      flex-grow: 1;
+  }
+  

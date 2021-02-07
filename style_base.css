@@ -8,38 +8,41 @@ body{
     padding: 0;
     margin: 0;
     counter-reset: box;
-    width: 100vw;
-    height: 100vh;
-
+    width: 100vw; /* vw viewport width*/
+    height: 100vh; /* vh viewport height*/
 }
 
-.box {
-height: 100px;
-width: 250px;
-background-color: blue;
-padding: 10px;
-margin: 5px;
-counter-increment: box_number;
+.box{
+    height: 100px;
+    width: 250px;
+    background-color: blue;
+    padding: 10px;
+    margin: 5px;
+    counter-increment: box_number;
 }
 
 .box_number::before{
-content: "Nr: " counter(box_number);
-font-size: 3rem;
+    content: "Nr: " counter(box_number);
+    font-size: 3rem;
 }
 
 .box:nth-child(2){
-    background-color: red;
+    background-color: yellow;
 }
 
 .box:nth-child(3){
-    background-color: yellow;
+    background-color: red;
 }
+
 .box:nth-child(4){
-    background-color: green;
+    background-color: pink;
 }
+
 .box:nth-child(5){
-    background-color: gray;
+    background-color: brown;
 }
+
 .box:nth-child(6){
     background-color: black;
 }
+
