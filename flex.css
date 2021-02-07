@@ -1,8 +1,8 @@
 body{
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap; /*domyślnie*/
-    justify-content: flex-end; /*domyślnie flex-start*/
+    flex-direction: column-reverse;
+    flex-wrap: wrap-reverse; /*domyślnie*/
+    justify-content: flex-start; /*domyślnie flex-start*/
 }
 
 body > * {
